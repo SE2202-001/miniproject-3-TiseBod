@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Analysis</title>
+    <style>
+        .job-click {
+            border-bottom: 1px solid #ccc; /* Light gray line */
+            padding: 10px 0;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        select {
+            margin: 10px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Job Analysis</h1>
+        
+        <input type="file" id="fileInput" accept=".json">
+        
+        <!-- Filters for Job Type and Skill -->
+        <label for="jobTypeFilter"> Job Type:</label>
+        <select id="jobTypeFilter">
+            <option value="all">All Types</option>
+        </select>
+
+        <label for="jobSkillFilter">    Skill:</label>
+        <select id="jobSkillFilter">
+            <option value="all">All Skills</option>
+        </select>
+
+
+        <label for="jobLevelFilter">Level:</label>
+        <select id="jobLevelFilter">
+            <option value= 'all'>All Skills</option>
+            </select>
+
+            <label for ="Sort">Sort By:</label>
+        <select id="Sort">
+            <option value="none">none</option>
+            <option value="a-z">Title(A-Z)</option>
+            <option value="z-a">Title(Z-A)</option>
+        </select>
+
+        <div id="jobList"></div>
+
+        <!-- Popup for job details -->
+        <div id="popup">
+            <p id="popupText">Default popup text</p>
+            <button id="closePopup">Close</button>
+        </div>
+
+        
+
+        
+    </header>
+
+    <script src="JobAnalysis.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>
